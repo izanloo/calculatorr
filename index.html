@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+        <div class="container">
+            <div class="calculator">
+                <p id="output" value="">0</p><br>
+                <input type="text" id="outtext" value=""><br>
+                <button name="ac" class="op" onclick="ac();">AC</button>
+                <button name="ce" class="op">CE</button>
+                <button onclick="keysubmit('/');" value="/" class="op">/</button>
+                <button onclick="keysubmit('*');" value="*" class="op">*</button><br>
+                <button onclick="keysubmit('7')">7</button>
+                <button onclick="keysubmit('8');" value="8">8</button>
+                <button onclick="keysubmit('9');" value="9">9</button>
+                <button onclick="keysubmit('-');" value="-" class="op">-</button><br>
+                <button onclick="keysubmit('4');" value="4">4</button>
+                <button onclick="keysubmit('5');" value="5">5</button>
+                <button onclick="keysubmit('6');" value="6">6</button>
+                <button onclick="keysubmit('+');" value="+" class="op" >+</button><br>
+                <button onclick="keysubmit('1');" value="1">1</button>
+                <button onclick="keysubmit('2');" value="2">2</button>
+                <button onclick="keysubmit('3');" value="3">3</button>
+                <button onclick="equal();" value="=" class="op" >=</button><br>
+                <button onclick="keysubmit('0');" value="0" id="op1">0</button>
+                <button onclick="keysubmit('.');" value="." >.</button>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+
+</body>
+</html>

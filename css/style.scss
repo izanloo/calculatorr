@@ -1,0 +1,77 @@
+//-------<varible>----------
+$colors:(
+  back-color:#26B9DE,
+  base-color:#F9B733,
+  back-btn:#fff,
+  operator: #FA552B,
+  press-btn:#9B55D8,
+
+);
+
+
+
+//-----<@mixin>-------------
+@function color($newcolor){
+  @return map-get($colors,$newcolor)
+}
+body {
+  background-color: color(back-color);
+  font-weight: bold;
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+
+    .calculator {
+      background-color: color(base-color);
+      width:320px;
+      border-radius: 5px;
+      height:520px;
+
+      #outtext {
+        width: 270px;
+        height: 50px;
+        border-radius: 10px;
+        &:focus{
+          outline: none;
+          font-size:30px;
+        }
+      }
+      button {
+        width: 60px;
+        height:65px;
+        margin-top:10px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: color(back-btn);
+        font-size:30px;
+        font-weight: bold;
+
+        &:focus{
+          outline:none ;
+        }
+
+
+        &:active, &.pressed{
+          box-shadow: 0 3px #9B55D8;
+          transform: translateY(3px);
+
+        }
+      }
+      #op1{
+        width:190px;
+      }
+
+      .op{
+        background-color: color(operator);
+        color: white;
+              }
+
+    }
+
+  }
+}
